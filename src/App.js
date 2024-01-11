@@ -3,6 +3,7 @@ import './App.css';
 import { Button } from 'react-bootstrap';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Header from './Header'
+import Home from './Home';
 import Login from './Login'
 import Register from './Register'
 import AddProduct from './AddProduct'
@@ -17,6 +18,7 @@ function App() {
       <BrowserRouter>
         {/* <h1>Ecomm Project</h1> */}
         <Routes>
+        <Route path="/home" Component={Home} />
           <Route path="/login" Component={Login} />
           <Route path="/register" Component={Register} />
           <Route path='/add' element={<Protected Cmp={AddProduct} />}></Route>  

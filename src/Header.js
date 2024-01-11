@@ -14,7 +14,7 @@ function Header() {
     }
 
     return (
-        <div>
+        <div className="sticky">
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
