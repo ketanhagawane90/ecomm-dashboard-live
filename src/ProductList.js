@@ -1,7 +1,7 @@
 import Header from "./Header";
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
-import { Table } from "react-bootstrap";
+import { Table,Container, Row } from "react-bootstrap";
 import {Link} from 'react-router-dom';
 
 function ProductList()
@@ -38,8 +38,9 @@ function ProductList()
     return(
         <>
         <Header />
-        <div className="col-sm-8 offset-sm-2">            
-            <h1>Product List</h1>
+        <Container className="pt-5 pb-5">
+        <Row>           
+            {/* <h1>Product List</h1> */}
             <Table striped bordered hover>
             <thead>
                 <tr>
@@ -64,8 +65,9 @@ function ProductList()
                     </tr>
             ))}
             </tbody>
-            </Table>          
-        </div>
+            </Table>
+        </Row>                       
+        </Container>
         </>
     )
 }

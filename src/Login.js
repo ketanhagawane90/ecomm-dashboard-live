@@ -8,6 +8,7 @@ function Login()
     const [password,setPassword]=useState("");
 
     const navigate=useNavigate();
+
     useEffect(()=>{
         if(localStorage.getItem('user-info'))
         {
@@ -59,7 +60,7 @@ function Login()
         <main>
         <section class="form-section">
         <div class="form-wrapper">
-            <h1 class="title">Test Login</h1>
+            <h1 class="title">Login</h1>
                 <div class="form-group">
                 <input type="email" placeholder="Email address" class="form-input" onChange={(e)=>setEmail(e.target.value)} required />
                 </div>

@@ -7,7 +7,14 @@
   pointer-events: none;
 }
 
-.sticky{}
+.text-white .nav-link{
+  color: #fff !important;
+}
+.text-white .nav-link:hover{
+  color: #fff !important;
+  text-decoration: underline;
+}
+
 .nav_bar_wrapper a{
   padding-left: 30px;
 }

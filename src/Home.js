@@ -1,9 +1,7 @@
-import Header from "./Header";
+// import Header from "./Header";
 import CarouselHome from "./components/CarouselHome";
 import React,{useState,useEffect} from "react";
 import axios from 'axios';
-import { Table } from "react-bootstrap";
-import {Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -43,23 +41,23 @@ function Home()
 
     return(
         <>
-        <Header />
+        {/* <Header /> */}
         <CarouselHome />
 
-        <Container>
+        <Container className="pt-5 pb-5">
         <h1>Product List</h1>
-        <Row xs={1} md={3} lg={3}>
+        <Row xs={1} md={4} lg={4}>
             {products.map(product => (
-                    <Col className="mt-5">                        
-                        <Card style={{ width: '18rem' }}>
+                    <Col className="mt-4">                        
+                        <Card>
                         <Card.Img variant="top" src={"http://digitalabhi.co.in/ecomm-backend/storage/app/"+product.file_path} className="d-block m-auto" style={{ width: '200px', height: '200px' }} />
-                        <Card.Body>
+                        <Card.Body style={{ padding: '0.5rem' }}>
                             <Card.Title>{product.name}</Card.Title>
                             <Card.Text>
-                                {product.description}
+                                {/* {product.description} */}
                                 <p>Price: {product.price}</p>
                             </Card.Text>
-                            <Button variant="primary">Add to Cart</Button>
+                            <Button variant="primary">View Details</Button>                          
                         </Card.Body>
                         </Card>                        
                     </Col>
